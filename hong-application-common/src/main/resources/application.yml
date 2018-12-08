@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: hong-application-common
+  profiles:
+    active: dev
+  output:
+    ansi:
+      enabled: detect
+  http:
+    encoding:
+      force: true
+    multipart:
+      max-file-size: 100MB    #设置上传文件的最大值,默认是1M
+      max-request-size: 500MB #设置请求体的最大值
+
+#mybatis:
+#  mapper-locations: classpath:mapper/*.xml

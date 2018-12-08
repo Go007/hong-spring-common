@@ -10,5 +10,8 @@
 	
 	<artifactId>hong-spring-common</artifactId>
 	<packaging>pom</packaging>
-	
+
+	<modules>
+		<module>hong-application-common</module>
+	</modules>
 </project>
