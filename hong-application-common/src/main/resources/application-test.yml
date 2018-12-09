@@ -21,9 +21,9 @@ spring:
 
   # datasource config
   datasource:
-    url: jdbc:mysql://localhost:3306/sample?useSSL=false
-    username: root
-    password: root
+    url: jdbc:mysql://10.12.11.185:3306/GiveU_Store
+    username: store_rw
+    password: Spdev$201708
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     # 下面为连接池的补充配置，应用到上面的数据源中
@@ -53,10 +53,10 @@ spring:
 
   # rabbitmq config
   rabbitmq:
-    host: localhost
-    port: 5672
-    username: root
-    password: root
+    host: 10.10.11.161 #10.10.11.139
+    port: 5674 # 5672
+    username: guest  #admin
+    password: guest  #admin
     virtual-host: /  #该属性可以隔离不同的服务，例如可以设置每个服务对应的virtual-host,这样不同服务的消息可以做到相互隔离
     connection-timeout: 300000
     publisher-confirms: true
