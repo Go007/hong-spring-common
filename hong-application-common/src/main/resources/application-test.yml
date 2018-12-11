@@ -9,16 +9,18 @@ spring:
         - 10.10.11.94:7004
         - 10.10.11.94:7005
         - 10.10.11.94:7006
-    pool:
-      # 连接池最大连接数（使用负值表示没有限制）
-      max-active: 500
-      # 连接池中的最小空闲连接
-      min-idle: 100
-      # 连接池中的最大空闲连接
-      max-idle: 500
-      # 连接池最大阻塞等待时间（使用负值表示没有限制）
-      max-wait: 1000
-
+  redisson:
+    iscluster: true
+    scanInterval: 1000
+    failedAttempts: 3
+    reconnectionTimeout: 3000
+    retryInterval: 1500
+    retryAttempts: 3
+    timeout: 3000
+    connectTimeout: 10000
+    idleConnectionTimeout: 10000
+    masterConnectionPoolSize: 64
+    slaveConnectionMinimumIdleSize: 10
   # datasource config
   datasource:
     url: jdbc:mysql://10.12.11.185:3306/GiveU_Store
