@@ -76,4 +76,15 @@ public class Result implements Serializable {
 		return "Result [code=" + code + ", message=" + message + ", result=" + result + ", data=" + data + "]";
 	}
 
+	public static Result buildSuccess(){
+		return new Result();
+	}
+
+	public static Result buildFailed(int code,String msg){
+		return new Result(code,msg);
+	}
+
+	public static Result buildFailed(String msg){
+		return new Result(-1,msg);
+	}
 }
