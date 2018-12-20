@@ -5,7 +5,7 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 /**
- * <br>property属性文件读取工具类，默认读取config.property</br>
+ * <br>properties属性文件读取工具类，默认读取config.properties</br>
  */
 public class GetPropertyUtils {
 
