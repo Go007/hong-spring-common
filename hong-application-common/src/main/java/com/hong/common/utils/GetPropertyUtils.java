@@ -9,20 +9,20 @@ import java.util.ResourceBundle;
  */
 public class GetPropertyUtils {
 
-    private ResourceBundle resourceBundle;
+    private static ResourceBundle resourceBundle;
 
     public GetPropertyUtils(){
-        this.resourceBundle = ResourceBundle.getBundle("config", Locale.getDefault());;
-    }
+        this("config");
+     }
 
     /**
      * @param propertiesHolder property文件名称
      */
     public GetPropertyUtils(String propertiesHolder){
-        this.resourceBundle = ResourceBundle.getBundle(propertiesHolder, Locale.getDefault());;
+        resourceBundle = ResourceBundle.getBundle(propertiesHolder, Locale.getDefault());;
     }
 
-    public String getLabel(String key) {
+    public static String getLabel(String key) {
         String label;
         try {
             label = new String(resourceBundle.getString(key).getBytes("ISO-8859-1"), "UTF-8");
