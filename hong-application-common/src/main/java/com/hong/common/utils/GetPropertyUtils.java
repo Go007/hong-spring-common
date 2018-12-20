@@ -5,11 +5,15 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 /**
- * <br>property属性文件读取工具类</br>
+ * <br>property属性文件读取工具类，默认读取config.property</br>
  */
 public class GetPropertyUtils {
 
     private ResourceBundle resourceBundle;
+
+    public GetPropertyUtils(){
+        this.resourceBundle = ResourceBundle.getBundle("config", Locale.getDefault());;
+    }
 
     /**
      * @param propertiesHolder property文件名称
