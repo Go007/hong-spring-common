@@ -44,7 +44,7 @@ public class CommonCheckLogger {
 			args = joinPoint.getArgs(); // 方法的参数
 			annotation = (ValidateGroup) getAnnotationByMethod(method, ValidateGroup.class);
 			if(annotation!=null){//开启validate注解采取校验
-				retinfo = validateFiled(annotation.fileds(), args);
+				retinfo = validateFiled(annotation.value(), args);
 			}else{
 				retinfo.flag=true;
 			}
