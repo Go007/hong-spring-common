@@ -7,7 +7,7 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
- @interface ValidateFiled {
+public @interface ValidateFiled {
 	
 	/**
 	 * 参数索引位置
